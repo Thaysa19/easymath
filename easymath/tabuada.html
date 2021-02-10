@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/estilo.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>SOMA</title>
+</head>
+<body>
+    <header>
+     <h1> EASY MATH </h1>
+     
+    </header>  
+    <section>
+        <div>        
+                <p> Número: <input type="number" name="num" id="txtnum">  <input type="button" value="Gerar Tabuada" onclick="gerar()"></p>
+     
+            </div>
+            <div>
+              <select name="tabuada" id="seltab" size="10">
+                  <option>Digite um número acima </option>
+              </select>
+        </div>
+        
+        
+
+    </section>
+    <footer>
+     <p>&copy;Thaysa Nery</p>
+    </footer>
+    <script>
+           function gerar(){
+   var num = document.getElementById("txtnum")
+   var tab = document.getElementById("seltab")
+   if (num.value.length == 0){
+       alert('Por favor, digite um número')
+   }else{
+      var n = Number(num.value)
+      var c = 1
+      tab.innerHTML = ""
+      while(c <= 10){
+          var item = document.createElement('option')
+          item.text = `${n} x ${c} = ${n*c}`
+          item.value = `tab${c}`
+          tab.appendChild(item)
+          c++
+      }
+   }
+}
+          </script>
+</body>
+</html>

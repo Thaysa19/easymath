@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/estilo.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>SOMA</title>
+</head>
+<body>
+    <header>
+     <h1> EASY MATH </h1>
+     <p>O jeito simples de resolver Matemática</p>
+    </header>  
+    <section>
+        <div>        
+            <p>  Informe o Número </p>
+         <input type="number" name="txtn1" id="txtn1"><br>  <br>
+                    <p> Informe a potencia</p>
+           <input type="number" name="txtn2" id="txtn2"> <br> <br>
+         <input type="button" class="btn btn-outline-primary" value="POTENCIAR" onclick="pot()">
+        </div>
+        <div>
+            <br>
+        <div id='res'>Resultado</div>
+        </div>
+        
+
+    </section>
+    <footer>
+     <p>&copy;Thaysa Nery</p>
+    </footer>
+    <script>
+            function pot(){
+             var tn1= window.document.getElementById('txtn1')
+             var tn2= window.document.querySelector('input#txtn2')
+             var res = window.document.getElementById('res')
+             var n1 = Number(tn1.value)
+             var n2 = Number(tn2.value)
+             var s = n1 ** n2 // o segredo está aqui //
+             res.innerHTML= `${n1} potenciado por ${n2} é  <strong>${s}</strong>`
+            }
+          </script>
+</body>
+</html>

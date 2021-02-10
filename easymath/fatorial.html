@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/estilo.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>SOMA</title>
+</head>
+<body>
+    <header>
+     <h1> EASY MATH </h1>
+     <p>O jeito simples de resolver Matemática</p>
+    </header>  
+    <section>
+        <div>        
+            <p>  Informe o Número </p>
+         <input type="number" name="txtn1" id="txtn1"><br>  <br>
+         <input type="button" class="btn btn-outline-primary" value="FATORIAR" onclick="fatorial()">
+        </div>
+        <div>
+            <br>
+        <div id='res'>Resultado</div>
+        </div>
+        
+
+    </section>
+    <footer>
+     <p>&copy;Thaysa Nery</p>
+    </footer>
+    <script>
+            
+             var n = window.document.getElementById('txtn1')
+             var res = window.document.getElementById('res')
+             num = Number(value.n)
+              function factorial(n)
+                 {
+                  if ((n == 0) || (n == 1))
+                  return 1;
+     
+                  var result = n; 
+    
+                  for (cont = n; cont > 1; cont--)
+                 result = result * (cont-1);
+    
+                  return result; 
+                } res.innerHTML = `${factorial()}`
+          </script>
+</body>
+</html>
